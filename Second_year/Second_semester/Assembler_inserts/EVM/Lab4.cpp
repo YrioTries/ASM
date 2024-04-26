@@ -1,6 +1,6 @@
 #include <iostream>;
 using namespace std;
-// Вариант 19
+// Вариант 4
 // Найти произведение квадратов всех отрицательных элементов массива A={a[i]}.
 
 void cinner(int& mas_size) {
