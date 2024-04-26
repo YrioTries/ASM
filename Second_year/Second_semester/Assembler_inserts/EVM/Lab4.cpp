@@ -16,7 +16,7 @@ void cinner(int& mas_size) {
 int main() {
 	int mas_size;
 	int error = 0;
-	int asm_result, cpp_result = 1;
+	int asm_result = 0, cpp_result = 1;
 
 	cinner(mas_size);
 	int* mas = new int[mas_size];
@@ -42,9 +42,9 @@ int main() {
 	
 
 	__asm {
-		xor esi, esi; подготовим регистр индекса в массиве <esi> = 0
-		mov ebx, mas; ebx указывает на начало массива
-		mov ecx, mas_size; счётчик цикла по всем элементам массива <ecx> = size(5)
+		xor esi, esi; // подготовим регистр индекса в массиве <esi> = 0
+		mov ebx, mas; // ebx указывает на начало массива
+		mov ecx, mas_size; // счётчик цикла по всем элементам массива <ecx> = size(5)
 		cmp ecx, 0 // mas_size > 0
 		jle zero_size_error
 		push 1 // В стеке произведение кубов
