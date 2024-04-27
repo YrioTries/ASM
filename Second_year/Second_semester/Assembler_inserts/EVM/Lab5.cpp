@@ -38,7 +38,7 @@ void calculate_asm(double a, double b, double c) {
 			fsub qword ptr[seven]; st0 = (4 * a + b - 7), st1 = (2 * c / b - c / a);
 
 		fxch st(1); st(0) = (2 * c / b - c / a), st(1) = (4 * a + b - 7)
-		fmulp st(1), st; st0 = (4 * a + b - 7) * (2 * c / b + c / a)
+		fmulp st(1), st; st0 = (4 * a + b - 7) * (2 * c / b - c / a)
 
 		jmp endc
 
